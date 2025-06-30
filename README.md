@@ -12,6 +12,7 @@ Nama: Dinar Wahyu Rahman
 | Metrik evaluasi | * Accuracy: Untuk mengukur seberapa baik model memprediksi secara keseluruhan. <br> * Precision: Untuk memastikan model tidak terlalu sering salah memprediksi pasien berisiko stroke. <br> * Recall (Sensitivity): Untuk memastikan semua pasien yang berisiko tinggi terkena stroke dapat terdeteksi dengan benar. <br> * F1-Score: Kombinasi antara precision dan recall sebagai metrik akhir evaluasi. |
 | Performa model | * Model XGBoost dengan tuning memberikan hasil terbaik, terutama dalam mendeteksi kasus stroke (kelas minoritas). * Random Forest juga memberikan performa yang baik dan stabil. <br> * Logistic Regression cocok sebagai baseline, namun kurang optimal untuk data kompleks. <br> * Pemilihan model akhir sebaiknya mempertimbangkan trade-off antara akurasi, recall, dan interpretasi, tergantung kebutuhan bisnis/medis. <br> Jika ingin fokus pada deteksi kasus stroke (mengurangi false negative), maka recall pada kelas 1 (stroke) menjadi metrik utama yang perlu diperhatikan.  |
 
-Demo Prototype Website: https://stroke-risk-prediction-web.up.railway.app/ 
+
+Prototype Website: <a href="https://stroke-risk-prediction-web.up.railway.app/ " target="_blank">Link Demo</a>
 
 ![image](https://github.com/user-attachments/assets/cc42a7a5-0a7b-4f0d-9b81-9b20f4bf7a1b)
