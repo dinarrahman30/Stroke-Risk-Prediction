@@ -15,4 +15,6 @@ Nama: Dinar Wahyu Rahman
 
 Prototype Website: <a href="https://stroke-risk-prediction-web.up.railway.app/ " target="_blank">Link Demo</a>
 
+Notebook: https://colab.research.google.com/drive/11zbHEcZnVXXD-Fqe_FPWvMxwJFWk4QIO?usp=sharing
+
 ![image](https://github.com/user-attachments/assets/cc42a7a5-0a7b-4f0d-9b81-9b20f4bf7a1b)
