@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template
 import joblib
 import pandas as pd
@@ -86,6 +87,6 @@ def predict():
 
 # Jalankan server
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 # Gunakan ini untuk menjalankan aplikasi Flask
 # app.run(debug=True) akan menjalankan aplikasi dalam mode debug, yang memberikan informasi lebih detail
