@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Risiko Stroke</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stroke Risk Prediction</h1>
+        <p>Enter patient data to predict the likelihood of a stroke.</p>
+
+        <form action="http://127.0.0.1:5000/predict" method="post">  
+            <!-- Input Numerik -->
+            <label for="age">Age</label>
+            <input placeholder="Age" type="number" id="age" name="age" min="1" max="120" required>
+
+            <label for="avg_glucose_level">Average Glucose Level</label>
+            <input placeholder="Average Glucose Level" type="number" id="avg_glucose_level" name="avg_glucose_level" step="0.1" required>
+
+            <label for="bmi">Body Mass Index (BMI)</label>
+            <input placeholder="Body Mass Index (BMI)" type="number" id="bmi" name="bmi" step="0.1" required>
+
+            <!-- Input Kategorikal -->
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="hypertension">Have you been diagnosed with hypertension?</label>
+            <select id="hypertension" name="hypertension" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <label for="heart_disease">Do you have any other heart diseases?</label>
+            <select id="heart_disease" name="heart_disease" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <label for="ever_married">Marital Status</label>
+            <select id="ever_married" name="ever_married" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="yes">Married</option>
+                <option value="no">Not Married</option>
+            </select>
+
+            <label for="work_type">Work Type</label>
+            <select id="work_type" name="work_type" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="private">Private</option>
+                <option value="self-employed">Self-Employed</option>
+                <option value="govt_job">Government Job</option>
+                <option value="never_worked">Never Worked</option>
+            </select>
+
+            <label for="residence_type">Residence Type</label>
+            <select id="residence_type" name="residence_type" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="urban">Urban</option>
+                <option value="rural">Rural</option>
+            </select>
+
+            <label for="smoking_status">Do you smoke?</label>
+            <select id="smoking_status" name="smoking_status" required>
+                <option value="" disabled selected hidden>Select</option>
+                <option value="formerly smoked">Formerly Smoked</option>
+                <option value="never smoked">Never Smoked</option>
+                <option value="smokes">Smokes</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+
+            <div class="button-group">
+                <button type="reset" class="btn btn-reset">Reset</button>
+                <button type="submit" class="btn btn-submit">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result" id="prediction-result">
+            <h2>Prediction Result:</h2>
+            <p class="prediction-text">{{ prediction_text }}</p>
+            <p class="probability-text">{{ probability_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background-color: #f0f0f0;">
+        <p>Contact me at:</p>
+        <a href="https://linkedin.com/in/dinar-wahyu-rahman" target="_blank" style="margin: 0 10px;">
+            LinkedIn
+        </a>
+        | <a href="https://github.com/dinarrahman30" target="_blank" style="margin: 0 10px;">
+            GitHub
+        </a>
+        <p style="margin-top: 10px;">&copy; 2025 Prototype Stroke Prediction | By Dinar Rahman</p>
+    </footer>
+
+    <script>
+    document.querySelector('form').addEventListener('reset', function () {
+        const resultBox = document.getElementById('prediction-result');
+        if (resultBox) {
+            resultBox.innerHTML = ''; // hapus isi hasil prediksi
+        }
+    });
+    </script>
+</body>
+</html>
