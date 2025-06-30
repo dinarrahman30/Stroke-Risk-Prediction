@@ -16,4 +16,6 @@ Author: [Dinar Wahyu Rahman](https://www.linkedin.com/in/dinar-wahyu-rahman)
 
 #### Website Appearance
 ![image](https://github.com/user-attachments/assets/cc42a7a5-0a7b-4f0d-9b81-9b20f4bf7a1b)
+![image](https://github.com/user-attachments/assets/17bd4083-04e5-4fbe-9833-8edeb6a43ae1)
+
 
